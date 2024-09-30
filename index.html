@@ -19,52 +19,34 @@
 </head>
 
 <body>
-    <header class="text-center py-2 bg-dark text-light">
-        <h1>To do List</h1>
-    </header>
-    <section>
-        <button id="addListBtn" type="button" class="btn btn-primary btn-sm">
-            Add List
-        </button>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Add Card
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static"
-            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                            Add new Card
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <body>
+        <!-- Container principal com alinhamento centralizado -->
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <!-- Caixa escura com estilo responsivo -->
+            <div class="bg-dark text-light w-50 p-4 rounded shadow-sm" style="max-width: 600px;">
+                <!-- Cabeçalho da lista de tarefas -->
+                <header class="text-center mb-4">
+                    <h1 class="h3">To-Do List</h1>
+                </header>
+                <!-- Seção para adicionar nova tarefa -->
+                <section>
+                    <div class="input-group mb-3">
+                        <input type="text" id="newTaskInput" class="form-control" placeholder="Adicionar nova tarefa"
+                            aria-label="Nova tarefa" />
+                        <button class="btn btn-primary" id="addTaskBtn">Add</button>
                     </div>
-                    <div class="modal-body">...</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary">Add</button>
-                    </div>
-                </div>
+                </section>
+                <!-- Seção para exibir as tarefas -->
+                <section>
+                    <ul id="taskList" class="list-group">
+                        <!-- Tarefas serão inseridas aqui pelo JavaScript -->
+                    </ul>
+                </section>
             </div>
         </div>
 
-        <!-- Card -->
-        <!-- <div class="card ms-3" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div> -->
-    </section>
-</body>
+
+    </body>
 
 </html>
