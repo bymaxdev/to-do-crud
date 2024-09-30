@@ -1,18 +1,12 @@
-const addListBtn = document.getElementById('addListBtn');
+const addListBtn = document.getElementById('addTaskBtn');
 
 addListBtn.addEventListener('click', () => {
-    const
-        inputText.type = 'text';
-
-    addListBtn.parentNode.replaceChild(inputText, addListBtn);
-    inputText.focus();
-
-    const saveListBtn = document.createElement('button');
-    saveListBtn.type = 'button';
-    saveListBtn.textContent = 'Save';
-    saveListBtn.classList.add('btn', 'btn-primary', 'btn-sm', 'ms-3');
-    inputText.parentNode.replaceChild(saveListBtn, inputText);
-
+    const task = document.getElementById('newTaskInput').value;
+    const taskList = document.getElementById('taskList');
+    const newTask = document.createElement('li');
+    newTask.textContent = task;
+    taskList.appendChild(newTask);
+    document.getElementById('newTaskInput').value = '';
 });
 
 
