@@ -16,32 +16,42 @@
         crossorigin="anonymous"></script>
     <!-- JS -->
     <script src="./js/script.js" defer></script>
+
+    <style>
+        .bg-primario {
+            background-color: #f4f4f9bd;
+            /* Teal */
+        }
+
+        .bg-secundario {
+            background-color: #364f6b;
+            /* Coral */
+            color: white;
+        }
+
+        .bg-botoes {
+            background-color: #fc5185;
+            /* Sandy Brown */
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
     <body>
-        <!-- Background: #264653
-        Fundo-Secundario: #E9C46A
-        Botoes: #F4A261 -->
-
-        <!-- Container principal com alinhamento centralizado -->
-        <div class="d-flex justify-content-center align-items-center min-vh-100">
-            <!-- Caixa escura com estilo responsivo -->
-            <div class="bg-dark text-light w-50 p-4 rounded shadow-sm" style="max-width: 600px;">
-                <!-- Cabeçalho da lista de tarefas -->
+        <div class="d-flex justify-content-center align-items-center min-vh-100 bg-primario">
+            <div class="w-50 p-4 rounded shadow-sm bg-secundario" style="max-width: 600px;">
                 <header class="text-center mb-4">
                     <h1 class="h3">To-Do List</h1>
                 </header>
-                <!-- Seção para adicionar nova tarefa -->
                 <section>
                     <div class="input-group mb-3">
                         <input type="text" id="newTaskInput" class="form-control" placeholder="Adicionar nova tarefa"
                             aria-label="Nova tarefa" />
-                        <button class="btn btn-primary" id="addTaskBtn">Add</button>
+                        <button class="btn bg-botoes" id="addTaskBtn">Add</button>
                     </div>
                 </section>
-                <!-- Seção para exibir as tarefas -->
                 <section>
                     <ul style="list-style-type: none;" id="taskList" class="list-group">
                         <!-- Tarefas serão inseridas aqui pelo JavaScript -->
